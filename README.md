@@ -8,7 +8,7 @@
   - `maven -> travel-anywhere-be -> lifecycle -> clean, install`
 
 - Add generated sources directory as a source root:
-- Clidk right on `target/generated-sources` -> `Mark Directory as` -> `Generated Sources Root`
+- Click right on `target/generated-sources` -> `Mark Directory as` -> `Generated Sources Root`
 
 - Run the application:
   - Navigate to `TravelAnywhereBeApplication` class and run it.
@@ -31,8 +31,8 @@
 ## QA
 ### prerequisites
 
-- BE application running localy
-- UI application running localy
+- BE application running locally
+- UI application running locally
 
 ### Setup
 - Open the `travel-anywhere-ui-qa` as a separate inteliji project
