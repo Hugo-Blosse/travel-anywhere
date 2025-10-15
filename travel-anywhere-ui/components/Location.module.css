@@ -1,0 +1,9 @@
+.location {
+    padding: 1rem;
+    border-bottom: dashed 1px darkgrey;
+}
+
+.location:hover, .location.selected {
+    cursor: pointer;
+    background-color: lightgray;
+}

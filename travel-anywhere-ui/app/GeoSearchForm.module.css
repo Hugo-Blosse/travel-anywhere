@@ -1,0 +1,11 @@
+.locationContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.container{
+    max-height: 80vh;
+    overflow-y: hidden;
+}

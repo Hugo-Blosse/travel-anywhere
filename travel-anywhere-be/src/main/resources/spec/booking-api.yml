@@ -1,0 +1,142 @@
+openapi: "3.0.0"
+info:
+  version: 2.0.0
+  title: Booking API
+  description: |
+    This specification contains Booking endpoints
+servers:
+  - url: http://localhost:8080
+paths:
+  /booking:
+    description: |
+      Create new booking
+    post:
+      tags:
+        - "Booking"
+      operationId: createBooking
+      requestBody:
+        description: Create a new booking
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateBookingRequest'
+            example:
+              {
+                "hotelId": "100126882",
+                "hotelName": "Studio Krakow Lea by Renters",
+                "firstName": "Denis",
+                "lastName": "Kurek",
+                "birthDate": "2025-06-10",
+                "email": "denis.kurek@sabre.com",
+                "startDate": "2025-09-16",
+                "endDate": "2025-09-26",
+                "numberOfGuests": 2
+              }
+      responses:
+        "200":
+          description: Ok. The successful response contains ID of the newly created booking
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CreateBookingResponse"
+              example:
+                {
+                  "id": "bckg68b42-f06a-4d22-aa8a-2f0c23fe69b4"
+                }
+    get:
+      tags:
+        - "Booking"
+      operationId: getBookings
+      parameters:
+        - name: name
+          in: query
+          description: booking name filter
+          allowEmptyValue: true
+          schema:
+            type: string
+          example: Booking
+        - name: priority
+          in: query
+          description: booking priority filter
+          allowEmptyValue: true
+          schema:
+            type: integer
+          example: 1
+      responses:
+        "200":
+          description: Ok. The successful response contains the list of 'FileGroupDTO's
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Booking"
+              example:
+                [
+                  {
+                    "hotelId": "100126882",
+                    "hotelName": "Studio Krakow Lea by Renters",
+                    "firstName": "Denis",
+                    "lastName": "Kurek",
+                    "birthDate": "2025-06-10",
+                    "email": "denis.kurek@sabre.com",
+                    "startDate": "2025-09-16",
+                    "endDate": "2025-09-26",
+                    "numberOfGuests": 2
+                  }
+                ]
+components:
+  schemas:
+    CreateBookingRequest:
+      type: object
+      properties:
+        hotelId:
+          type: string
+        hotelName:
+          type: string
+          minLength: 2
+          maxLength: 64
+        firstName:
+          type: string
+          minLength: 2
+          maxLength: 32
+        lastName:
+          type: string
+          minLength: 2
+          maxLength: 32
+        birthDate:
+          type: string
+          format: date
+        email:
+          type: string
+          format: email
+        startDate:
+          type: string
+          format: date
+        endDate:
+          type: string
+          format: date
+        numberOfGuests:
+          type: integer
+          minimum: 1
+          maximum: 10
+      required:
+        - hotelId
+        - hotelName
+        - firstName
+        - lastName
+        - birthDate
+        - email
+        - startDate
+        - endDate
+        - numberOfGuests
+    CreateBookingResponse:
+      type: object
+      properties:
+        id:
+          type: string
+      required:
+        - id
+    Booking:
+      $ref: "./components/Booking.yml"

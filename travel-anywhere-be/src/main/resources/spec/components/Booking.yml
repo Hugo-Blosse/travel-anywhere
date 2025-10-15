@@ -1,0 +1,46 @@
+type: object
+properties:
+  id:
+    type: string
+  hotelId:
+    type: string
+    example: "100126882"
+  hotelName:
+    type: string
+    example: "Studio Krakow Lea by Renters"
+  firstName:
+    type: string
+    example: "Denis"
+  lastName:
+    type: string
+    example: "Kurek"
+  birthDate:
+    type: string
+    format: date
+    example: "2025-06-10"
+  email:
+    type: string
+    format: email
+    example: "denis.kurek@sabre.com"
+  startDate:
+    type: string
+    format: date
+    example: "2025-09-16"
+  endDate:
+    type: string
+    format: date
+    example: "2025-09-26"
+  numberOfGuests:
+    type: integer
+    example: 2
+required:
+  - id
+  - hotelId
+  - hotelName
+  - firstName
+  - lastName
+  - birthDate
+  - email
+  - startDate
+  - endDate
+  - numberOfGuests
