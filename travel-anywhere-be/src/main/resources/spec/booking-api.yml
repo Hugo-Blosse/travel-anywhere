@@ -25,12 +25,12 @@ paths:
               {
                 "hotelId": "100126882",
                 "hotelName": "Studio Krakow Lea by Renters",
-                "firstName": "Denis",
-                "lastName": "Kurek",
+                "firstName": "Sabre",
+                "lastName": "Academy",
                 "birthDate": "2025-06-10",
-                "email": "denis.kurek@sabre.com",
-                "startDate": "2025-09-16",
-                "endDate": "2025-09-26",
+                "email": "academy@sabre.com",
+                "startDate": "2025-12-16",
+                "endDate": "2025-12-26",
                 "numberOfGuests": 2
               }
       responses:
@@ -77,12 +77,12 @@ paths:
                   {
                     "hotelId": "100126882",
                     "hotelName": "Studio Krakow Lea by Renters",
-                    "firstName": "Denis",
-                    "lastName": "Kurek",
+                    "firstName": "Sabre",
+                    "lastName": "Academy",
                     "birthDate": "2025-06-10",
-                    "email": "denis.kurek@sabre.com",
-                    "startDate": "2025-09-16",
-                    "endDate": "2025-09-26",
+                    "email": "academy@sabre.com",
+                    "startDate": "2025-12-16",
+                    "endDate": "2025-12-26",
                     "numberOfGuests": 2
                   }
                 ]
@@ -96,11 +96,9 @@ components:
         hotelName:
           type: string
           minLength: 2
-          maxLength: 64
         firstName:
           type: string
           minLength: 2
-          maxLength: 32
         lastName:
           type: string
           minLength: 2
