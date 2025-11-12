@@ -28,7 +28,7 @@ export default function HotelDetails(props: Props) {
             <Card.Body>
                 <Row>
                     <Col md={8}>
-                        <Card.Title>{hotelDetails.name}</Card.Title>
+                        <Card.Title className="hotelName">{hotelDetails.name}</Card.Title>
                         <Card.Text>
                             {hotelDetails.city && (<><strong>City:</strong> {hotelDetails.city}<br/></>)}
                             {hotelDetails.address && (<><strong>Address:</strong> {hotelDetails.address}<br/></>)}

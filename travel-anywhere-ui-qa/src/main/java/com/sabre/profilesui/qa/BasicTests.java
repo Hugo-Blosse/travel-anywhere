@@ -33,8 +33,9 @@ public class BasicTests {
             page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("End Date")).fill("2028-05-05");
             page.getByRole(AriaRole.SPINBUTTON, new Page.GetByRoleOptions().setName("Number Of Guests")).click();
             page.getByRole(AriaRole.SPINBUTTON, new Page.GetByRoleOptions().setName("Number Of Guests")).fill("5");
+            String hotelName = page.locator(".hotelName").textContent();
             page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Submit")).click();
-            assertThat(page.locator("h1")).hasText("Bookings");
+            assertThat(page.locator(".hotelName")).hasText(hotelName);
         }
     }
 }
