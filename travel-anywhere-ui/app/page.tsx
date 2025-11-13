@@ -82,7 +82,7 @@ export default function GeoSearchForm() {
                          markers={markers} categories={categoriesToDisplay} selectedLocation={selectedLocation}
                          setSelected={setSelectedLocation}/>
                 </Col>
-                <Col xs={4} className={styles.container}>
+                <Col xs={4} className={`searchResultList ${styles.container}`}>
                     <Form className={styles.locationContainer}>
                         {ConstValues.map((location) =>
                             <Form.Check inline key={`location-${location}`} label={location.toLowerCase()}

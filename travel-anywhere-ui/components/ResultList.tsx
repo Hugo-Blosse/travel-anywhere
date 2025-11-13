@@ -25,7 +25,7 @@ export default function ResultList(props: Props) {
         return <InitialPanel/>
     }
 
-    return <div className={styles.container}>
+    return <div className={`${styles.container}`}>
         {markers && markers.filter((marker: LocationData) => categories.includes(marker.Category))
             .map((marker: LocationData) => {
                 const isSelected = selectedLocation?.Id === marker.Id;

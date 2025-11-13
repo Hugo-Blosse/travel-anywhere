@@ -65,7 +65,7 @@ export default function Bookings() {
             <ListGroup>
                 {bookings.map((booking) =>
                     <ListGroup.Item key={booking.id}>
-                        <h6>{booking.hotelName}</h6>
+                        <h6 className={"hotelName"}>{booking.hotelName}</h6>
                         <p>From {booking.startDate} to {booking.endDate}, for {booking.numberOfGuests} guests</p>
                         <p>Booked by {booking.firstName} {booking.lastName}, email: {booking.email}</p>
                     </ListGroup.Item>

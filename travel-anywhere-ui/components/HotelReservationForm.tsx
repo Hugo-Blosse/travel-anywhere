@@ -76,7 +76,7 @@ export default function HotelReservationForm(props: Props) {
                             handleSubmit(e)
                         }}>
                             <Row className="mb-3">
-                                <Form.Group as={Col} md="4" controlId="firstName">
+                                <Form.Group className="firstNameGroup" as={Col} md="4" controlId="firstName">
                                     <Form.Label>First name</Form.Label>
                                     <Form.Control
                                         placeholder="First name"
@@ -90,7 +90,7 @@ export default function HotelReservationForm(props: Props) {
                                     </Form.Control.Feedback>
                                 </Form.Group>
 
-                                <Form.Group as={Col} md="4" controlId="lasttName">
+                                <Form.Group className="lastNameGroup" as={Col} md="4" controlId="lasttName">
                                     <Form.Label>Last name</Form.Label>
                                     <Form.Control
                                         type="text"
@@ -104,7 +104,7 @@ export default function HotelReservationForm(props: Props) {
                                     </Form.Control.Feedback>
                                 </Form.Group>
 
-                                <Form.Group as={Col} md="4" controlId="birthDate">
+                                <Form.Group className="birthDateGroup" as={Col} md="4" controlId="birthDate">
                                     <Form.Label>Birth Date</Form.Label>
                                     <InputGroup hasValidation>
                                         <Form.Control
@@ -120,7 +120,7 @@ export default function HotelReservationForm(props: Props) {
                                 </Form.Group>
                             </Row>
                             <Row className="mb-3">
-                                <Form.Group as={Col} md="4" controlId="email">
+                                <Form.Group className="emailGroup" as={Col} md="4" controlId="email">
                                     <Form.Label>Email</Form.Label>
                                     <Form.Control type="email"
                                                   name="email"
@@ -132,7 +132,7 @@ export default function HotelReservationForm(props: Props) {
                                     </Form.Control.Feedback>
                                 </Form.Group>
 
-                                <Form.Group as={Col} md="3" controlId="startDate">
+                                <Form.Group className="startDateGroup" as={Col} md="3" controlId="startDate">
                                     <Form.Label>Start Date</Form.Label>
                                     <Form.Control type="date"
                                                   name="startDate"
@@ -144,7 +144,7 @@ export default function HotelReservationForm(props: Props) {
                                     </Form.Control.Feedback>
                                 </Form.Group>
 
-                                <Form.Group as={Col} md="3" controlId="endDate">
+                                <Form.Group className="endDateGroup" as={Col} md="3" controlId="endDate">
                                     <Form.Label>End Date</Form.Label>
                                     <Form.Control type="date"
                                                   name="endDate"
@@ -156,7 +156,7 @@ export default function HotelReservationForm(props: Props) {
                                     </Form.Control.Feedback>
                                 </Form.Group>
 
-                                <Form.Group as={Col} md="2" controlId="validationCustom03">
+                                <Form.Group className="numberOfGuestsGroup" as={Col} md="2" controlId="validationCustom03">
                                     <Form.Label>Number Of Guests</Form.Label>
                                     <Form.Control type="number"
                                                   name="numberOfGuests"
