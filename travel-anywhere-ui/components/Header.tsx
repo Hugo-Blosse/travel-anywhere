@@ -20,8 +20,9 @@ export default function HeaderNavigation() {
                 <Navbar.Brand href="/"><img
                     alt="Sabre logo"
                     src="/logo.png"
-                    width="130"
-                    height="50"
+                    width="4167"
+                    height="1201"
+                    style={{width: 150, height: "auto"}}
                     className="d-inline-block align-top"
                 /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
